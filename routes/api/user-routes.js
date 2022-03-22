@@ -25,10 +25,10 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'title', 'post_url', 'created_at']
       },
       {
-          model: Post,
-          attributes: ['title'],
-          through: Vote,
-          as: 'voted_posts'
+        model: Post,
+        attributes: ['title'],
+        through: Vote,
+        as: 'voted_posts'
       }
     ]
   })
